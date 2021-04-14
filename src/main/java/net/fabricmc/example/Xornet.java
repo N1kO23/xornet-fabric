@@ -26,6 +26,7 @@ public class Xornet implements ModInitializer {
 
 	// Create new item with a max stack size of 32
 	public static final Item SILICON_CHUNK = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64));
+	public static final Item SILICON_CRYSTAL = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64));
 	public static final Block SILICON_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0f));
 	private static ConfiguredFeature<?, ?> ORE_SILICON_OVERWORLD = Feature.ORE
 	  .configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, SILICON_ORE.getDefaultState(), 9)) // vein size
@@ -47,11 +48,13 @@ public class Xornet implements ModInitializer {
 		// Proceed with mald caution.
 
 		// When the game initializes register our items!
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_chunk"),   SILICON_CHUNK);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_pickaxe"), SILICON_PICKAXE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_sword"),   SILICON_SWORD);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_axe"),     SILICON_AXE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_shovel"),  SILICON_SHOVEL);
+
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_chunk"),   SILICON_CHUNK);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_crystal"), SILICON_CRYSTAL);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_ore"), new BlockItem(SILICON_ORE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 
 		// Silicon ore!

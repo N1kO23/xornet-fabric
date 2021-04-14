@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+    "item": "xornet:silicon_chunk"
+    },
+    "result": "xornet:silicon_crystal",
+    "experience": 0.3,
+    "cookingtime": 200
+}

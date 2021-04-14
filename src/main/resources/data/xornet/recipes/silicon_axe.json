@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "WW ",
-    " R ",
+    "WR ",
     " R "
   ],
   "key": {
     "W": {
-      "item": "xornet:silicon_chunk"
+      "item": "xornet:silicon_crystal"
     },
     "R": {
       "item": "minecraft:stick"

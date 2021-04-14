@@ -1,6 +1,7 @@
 {
   "block.xornet.silicon_ore": "Silicon Ore",
   "item.xornet.silicon_chunk": "Silicon Chunk",
+  "item.xornet.silicon_crystal": "Silicon Crystal",
   "item.xornet.silicon_pickaxe": "Silicon Pickaxe",
   "item.xornet.silicon_axe": "Silicon Axe",
   "item.xornet.silicon_sword": "Silicon Sword",
