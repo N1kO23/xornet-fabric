@@ -7,9 +7,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -35,6 +33,12 @@ public class Xornet implements ModInitializer {
 	  .spreadHorizontally()
 	  .repeat(8); // number of veins per chunk
 
+	// Instantiate Silicon Tools
+	public static final SiliconToolMaterial INSTANCE = new SiliconToolMaterial();
+	public static ToolItem SILICON_PICKAXE = new CustomPickaxeItem(SiliconToolMaterial.INSTANCE, 2, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_SWORD = new CustomSwordItem(SiliconToolMaterial.INSTANCE, 	 2, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_AXE = new CustomAxeItem(SiliconToolMaterial.INSTANCE, 	     2, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_SHOVEL = new CustomShovelItem(SiliconToolMaterial.INSTANCE,   2, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
 
 	@Override
 	public void onInitialize() {
@@ -45,13 +49,19 @@ public class Xornet implements ModInitializer {
 		// When the game initializes register our items!
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_chunk"), SILICON_CHUNK);
 
-		// Silicon ore!
-		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "silicon_ore"), SILICON_ORE);
+		// Register Silicon Tools!
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_pickaxe"), SILICON_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_sword"),   SILICON_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_axe"),     SILICON_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_shovel"),  SILICON_SHOVEL);
 
 		// Make an item for that block!
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_ore"), new BlockItem(SILICON_ORE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 
-		// Register Biome Modifications
+		// Silicon ore!
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "silicon_ore"), SILICON_ORE);
+
+		// Register biome modifications!
 		RegistryKey<ConfiguredFeature<?, ?>> oreSiliconOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN, new Identifier(MOD_ID, "ore_silicon_overworld"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSiliconOverworld.getValue(), ORE_SILICON_OVERWORLD);
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSiliconOverworld);

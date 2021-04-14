@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W ",
+    " R ",
+    " R "
+  ],
+  "key": {
+    "W": {
+      "item": "xornet:silicon_chunk"
+    },
+    "R": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "xornet:silicon_shovel",
+    "count": 1
+  }
+}
