@@ -17,7 +17,7 @@ public class Xornet implements ModInitializer {
 	public static final String MOD_ID = "xornet";
 
 	// Create new item with a max stack size of 32
-	public static final Item FABRIC_ITEM = new Item(new FabricItemSettings().group(ItemGroup.MISC).maxCount(32));
+	public static final Item SILICON_CHUNK = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64));
 	public static final Block SILICON_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0f));
 
 	@Override
@@ -27,7 +27,7 @@ public class Xornet implements ModInitializer {
 		// Proceed with mild caution.
 
 		// When the game initializes register our items!
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fabric_item"), FABRIC_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_chunk"), SILICON_CHUNK);
 
 		// Silicon ore!
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "silicon_ore"), SILICON_ORE);
