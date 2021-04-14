@@ -35,10 +35,10 @@ public class Xornet implements ModInitializer {
 
 	// Instantiate Silicon Tools
 	public static final SiliconToolMaterial INSTANCE = new SiliconToolMaterial();
-	public static ToolItem SILICON_PICKAXE = new CustomPickaxeItem(SiliconToolMaterial.INSTANCE, 2, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_SWORD = new CustomSwordItem(SiliconToolMaterial.INSTANCE, 	 2, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_AXE = new CustomAxeItem(SiliconToolMaterial.INSTANCE, 	     2, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_SHOVEL = new CustomShovelItem(SiliconToolMaterial.INSTANCE,   2, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_PICKAXE = new CustomPickaxeItem(SiliconToolMaterial.INSTANCE, 4, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_SWORD = new CustomSwordItem(SiliconToolMaterial.INSTANCE, 	 8, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_AXE = new CustomAxeItem(SiliconToolMaterial.INSTANCE, 	     9, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_SHOVEL = new CustomShovelItem(SiliconToolMaterial.INSTANCE,   3, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
 
 	@Override
 	public void onInitialize() {
@@ -47,15 +47,11 @@ public class Xornet implements ModInitializer {
 		// Proceed with mald caution.
 
 		// When the game initializes register our items!
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_chunk"), SILICON_CHUNK);
-
-		// Register Silicon Tools!
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_chunk"),   SILICON_CHUNK);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_pickaxe"), SILICON_PICKAXE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_sword"),   SILICON_SWORD);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_axe"),     SILICON_AXE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_shovel"),  SILICON_SHOVEL);
-
-		// Make an item for that block!
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_ore"), new BlockItem(SILICON_ORE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 
 		// Silicon ore!
