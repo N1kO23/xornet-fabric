@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "xornet:block/silicon_ore" }
+  }
+}
