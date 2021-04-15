@@ -23,7 +23,7 @@ public class SiliconToolMaterial implements ToolMaterial {
         return 15;
     }
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Xornet.SILICON_CRYSTAL);
+        return Ingredient.ofItems(Xornet.AURA_QUARTZ);
     }
 
     public static final SiliconToolMaterial INSTANCE = new SiliconToolMaterial();

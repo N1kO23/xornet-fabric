@@ -90,20 +90,20 @@ public class Xornet implements ModInitializer {
 
 	// Instantiate Silicon Tools
 	public static final SiliconToolMaterial INSTANCE = 	new SiliconToolMaterial();
-	public static ToolItem SILICON_PICKAXE = 			new CustomPickaxeItem(SiliconToolMaterial.INSTANCE, 4, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_SWORD =  			new CustomSwordItem(SiliconToolMaterial.INSTANCE, 	8, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_AXE =  	    		new CustomAxeItem(SiliconToolMaterial.INSTANCE, 	9, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_SHOVEL = 			new CustomShovelItem(SiliconToolMaterial.INSTANCE,  3, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem AURA_PICKAXE = 			new CustomPickaxeItem(SiliconToolMaterial.INSTANCE, 4, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem AURA_SWORD =  			new CustomSwordItem(SiliconToolMaterial.INSTANCE, 	8, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem AURA_AXE =  	    		new CustomAxeItem(SiliconToolMaterial.INSTANCE, 	9, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem AURA_SHOVEL = 			new CustomShovelItem(SiliconToolMaterial.INSTANCE,  3, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Creative item group
 	public static final ItemGroup XORNET_ITEM_GROUP = FabricItemGroupBuilder.create(
 			new Identifier(MOD_ID, "general"))
 				.icon(() -> new ItemStack(AURA_QUARTZ))
 				.appendItems(stacks -> {
-					stacks.add(new ItemStack(SILICON_PICKAXE));
-					stacks.add(new ItemStack(SILICON_SWORD));
-					stacks.add(new ItemStack(SILICON_AXE));
-					stacks.add(new ItemStack(SILICON_SHOVEL));
+					stacks.add(new ItemStack(AURA_PICKAXE));
+					stacks.add(new ItemStack(AURA_SWORD));
+					stacks.add(new ItemStack(AURA_AXE));
+					stacks.add(new ItemStack(AURA_SHOVEL));
 					stacks.add(new ItemStack(SILICON_CHUNK));
 					stacks.add(new ItemStack(SILICON_CRYSTAL));
 					stacks.add(new ItemStack(SILICON_ORE_BLOCKITEM));
@@ -128,10 +128,10 @@ public class Xornet implements ModInitializer {
 
 		// ITEMS ------------------------------------------------------------------------------------------
 		// When the game initializes register our items!
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_pickaxe"), SILICON_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_sword"),   SILICON_SWORD);
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_axe"),     SILICON_AXE);
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_shovel"),  SILICON_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "aura_pickaxe"), AURA_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "aura_sword"),   AURA_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "aura_axe"),     AURA_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "aura_shovel"),  AURA_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bastel_processor_l1"),     BASTEL_PROCESSOR_L1);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "razor_processor_r1"),  RAZOR_PROCESSOR_R1);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "memory_1vb"),  MEMORY_1VB);

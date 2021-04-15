@@ -7,14 +7,14 @@
   ],
   "key": {
     "W": {
-      "item": "xornet:silicon_crystal"
+      "item": "xornet:aura_quartz"
     },
     "R": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "xornet:silicon_shovel",
+    "item": "xornet:aura_shovel",
     "count": 1
   }
 }

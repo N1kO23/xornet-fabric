@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "xornet:item/silicon_shovel"
+    "layer0": "xornet:item/aura_pickaxe"
   }
 }

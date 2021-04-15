@@ -2,9 +2,9 @@
   "block.xornet.silicon_ore": "Silicon Ore",
   "item.xornet.silicon_chunk": "Silicon Chunk",
   "item.xornet.silicon_crystal": "Silicon Crystal",
-  "item.xornet.silicon_pickaxe": "Silicon Pickaxe",
-  "item.xornet.silicon_axe": "Silicon Axe",
-  "item.xornet.silicon_sword": "Silicon Sword",
-  "item.xornet.silicon_shovel": "Silicon Shovel",
+  "item.xornet.aura_pickaxe": "Aura Pickaxe",
+  "item.xornet.aura_axe": "Aura Axe",
+  "item.xornet.aura_sword": "Aura Sword",
+  "item.xornet.aura_shovel": "Aura Shovel",
   "item.xornet.silicon_hoe": "Silicon Hoe"
 }

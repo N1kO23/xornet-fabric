@@ -1,7 +1,7 @@
 {
     "type": "minecraft:smelting",
     "ingredient": {
-    "item": "xornet:silicon_chunk"
+    "item": "xornet:aura_quartz"
     },
     "result": "xornet:silicon_crystal",
     "experience": 0.3,
