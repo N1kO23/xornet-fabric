@@ -4,7 +4,7 @@ import net.fabricmc.example.Xornet;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class SiliconToolMaterial implements ToolMaterial {
+public class AuraQuartzToolMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
@@ -23,8 +23,8 @@ public class SiliconToolMaterial implements ToolMaterial {
         return 15;
     }
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Xornet.AURA_QUARTZ);
+        return Ingredient.ofItems(Items.AURA_QUARTZ);
     }
 
-    public static final SiliconToolMaterial INSTANCE = new SiliconToolMaterial();
+    public static final AuraQuartzToolMaterial INSTANCE = new AuraQuartzToolMaterial();
 }
