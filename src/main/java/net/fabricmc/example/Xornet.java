@@ -76,10 +76,10 @@ public class Xornet implements ModInitializer {
 
 	// Instantiate Silicon Tools
 	public static final SiliconToolMaterial INSTANCE = new SiliconToolMaterial();
-	public static ToolItem SILICON_PICKAXE = new CustomPickaxeItem(SiliconToolMaterial.INSTANCE, 4, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_SWORD = new CustomSwordItem(SiliconToolMaterial.INSTANCE, 	 8, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_AXE = new CustomAxeItem(SiliconToolMaterial.INSTANCE, 	     9, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_SHOVEL = new CustomShovelItem(SiliconToolMaterial.INSTANCE,   3, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_PICKAXE = 	new CustomPickaxeItem(SiliconToolMaterial.INSTANCE, 4, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_SWORD = 		new CustomSwordItem(SiliconToolMaterial.INSTANCE, 	8, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_AXE = 		new CustomAxeItem(SiliconToolMaterial.INSTANCE, 	9, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_SHOVEL = 	new CustomShovelItem(SiliconToolMaterial.INSTANCE,  3, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Creative item group
 	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.create(
