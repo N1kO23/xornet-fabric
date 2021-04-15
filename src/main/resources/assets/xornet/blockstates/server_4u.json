@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "xornet:block/server_4u" },
+    "facing=east":  { "model": "xornet:block/server_4u", "y":  90},
+    "facing=south": { "model": "xornet:block/server_4u", "y": 180 },
+    "facing=west":  { "model": "xornet:block/server_4u", "y": 270 }
+  }
+}
