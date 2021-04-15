@@ -1,8 +1,9 @@
 {
 	"credit": "Made with Blockbench",
+	"parent": "block/block",
 	"textures": {
-		"0": "bastel_processor_l1/bastel_processor_l1",
-		"particle": "bastel_processor_l1/bastel_processor_l1"
+		"0": "xornet:item/bastel_processor_l1",
+		"particle": "xornet:item/bastel_processor_l1"
 	},
 	"elements": [
 		{
@@ -192,11 +193,13 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"translation": [0, 4.25, 0],
+			"rotation": [90, 0, 0],
+			"translation": [0, 1.75, 4.75],
 			"scale": [0.5, 0.5, 0.5]
 		},
 		"thirdperson_lefthand": {
-			"translation": [0, 4.25, 0],
+			"rotation": [90, 0, 0],
+			"translation": [0, 1.75, 4.75],
 			"scale": [0.5, 0.5, 0.5]
 		},
 		"firstperson_righthand": {
@@ -206,7 +209,8 @@
 			"translation": [0, 9, 0]
 		},
 		"ground": {
-			"translation": [0, 4.5, 0]
+			"translation": [0, 0.5, 0],
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
 			"rotation": [90, 0, 0]

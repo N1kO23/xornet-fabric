@@ -47,18 +47,22 @@ public class Xornet implements ModInitializer {
 	// Mod namespace
 	public static final String MOD_ID = "xornet";
 
-
 	// Create new item with a max stack size of 32
 	public static final Item SILICON_CHUNK = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64));
 	public static final Item SILICON_CRYSTAL = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64));
 	public static final Item AURA_QUARTZ = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64));
 
-	// Ores
+	// Create CPU items
+	public static final Item BASTEL_PROCESSOR_L1 = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(1));
+	public static final Item RAZOR_PROCESSOR_R1 = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(1));
+
+	// Overworld Ores
 	public static final Block SILICON_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f));
 	public static final BlockItem SILICON_ORE_BLOCKITEM = new BlockItem(SILICON_ORE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
 
+	// Nether Ores
 	public static final Block NETHER_AURA_QUARTZ_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f));
-		public static final BlockItem NETHER_AURA_QUARTZ_ORE_BLOCKITEM = new BlockItem(NETHER_AURA_QUARTZ_ORE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final BlockItem NETHER_AURA_QUARTZ_ORE_BLOCKITEM = new BlockItem(NETHER_AURA_QUARTZ_ORE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
 
 	// Overworld Ore Modifications
 	private static ConfiguredFeature<?, ?> ORE_SILICON_OVERWORLD = Feature.ORE
@@ -75,14 +79,14 @@ public class Xornet implements ModInitializer {
 		.repeat(4);
 
 	// Instantiate Silicon Tools
-	public static final SiliconToolMaterial INSTANCE = new SiliconToolMaterial();
-	public static ToolItem SILICON_PICKAXE = 	new CustomPickaxeItem(SiliconToolMaterial.INSTANCE, 4, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_SWORD = 		new CustomSwordItem(SiliconToolMaterial.INSTANCE, 	8, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_AXE = 		new CustomAxeItem(SiliconToolMaterial.INSTANCE, 	9, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem SILICON_SHOVEL = 	new CustomShovelItem(SiliconToolMaterial.INSTANCE,  3, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final SiliconToolMaterial INSTANCE = 	new SiliconToolMaterial();
+	public static ToolItem SILICON_PICKAXE = 			new CustomPickaxeItem(SiliconToolMaterial.INSTANCE, 4, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_SWORD =  			new CustomSwordItem(SiliconToolMaterial.INSTANCE, 	8, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_AXE =  	    		new CustomAxeItem(SiliconToolMaterial.INSTANCE, 	9, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem SILICON_SHOVEL = 			new CustomShovelItem(SiliconToolMaterial.INSTANCE,  3, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Creative item group
-	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.create(
+	public static final ItemGroup XORNET_ITEM_GROUP = FabricItemGroupBuilder.create(
 			new Identifier(MOD_ID, "general"))
 				.icon(() -> new ItemStack(AURA_QUARTZ))
 				.appendItems(stacks -> {
@@ -95,6 +99,8 @@ public class Xornet implements ModInitializer {
 					stacks.add(new ItemStack(SILICON_ORE_BLOCKITEM));
 					stacks.add(new ItemStack(NETHER_AURA_QUARTZ_ORE_BLOCKITEM));
 					stacks.add(new ItemStack(AURA_QUARTZ));
+					stacks.add(new ItemStack(BASTEL_PROCESSOR_L1));
+					stacks.add(new ItemStack(RAZOR_PROCESSOR_R1));
 				})
 				.build();
 
@@ -110,6 +116,8 @@ public class Xornet implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_sword"),   SILICON_SWORD);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_axe"),     SILICON_AXE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_shovel"),  SILICON_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bastel_processor_l1"),     BASTEL_PROCESSOR_L1);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "razor_processor_r1"),  RAZOR_PROCESSOR_R1);
 
 		// Overworld Items
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "silicon_ore"), SILICON_ORE_BLOCKITEM);
