@@ -14,10 +14,10 @@ public class RegisterItems {
         Registry.register(Registry.ITEM, new Identifier(Xornet.MOD_ID, "aura_quartz_chestplate"), Items.AURA_QUARTZ_CHESTPLATE);
         Registry.register(Registry.ITEM, new Identifier(Xornet.MOD_ID, "aura_quartz_leggings"),   Items.AURA_QUARTZ_LEGGINGS);
         Registry.register(Registry.ITEM, new Identifier(Xornet.MOD_ID, "aura_quartz_boots"),      Items.AURA_QUARTZ_BOOTS);
-        Registry.register(Registry.ITEM, new Identifier(Xornet.MOD_ID, "aura_pickaxe"),           Items.AURA_PICKAXE);
         Registry.register(Registry.ITEM, new Identifier(Xornet.MOD_ID, "aura_sword"),             Items.AURA_SWORD);
-        Registry.register(Registry.ITEM, new Identifier(Xornet.MOD_ID, "aura_axe"),               Items.AURA_AXE);
+        Registry.register(Registry.ITEM, new Identifier(Xornet.MOD_ID, "aura_pickaxe"),           Items.AURA_PICKAXE);
         Registry.register(Registry.ITEM, new Identifier(Xornet.MOD_ID, "aura_shovel"),            Items.AURA_SHOVEL);
+        Registry.register(Registry.ITEM, new Identifier(Xornet.MOD_ID, "aura_axe"),               Items.AURA_AXE);
 
         // Pumpkin 
 		Registry.register(Registry.ITEM, new Identifier(Xornet.MOD_ID, "powered_pumpkin_helmet"), Items.POWERED_PUMPKIN_HELMET);
